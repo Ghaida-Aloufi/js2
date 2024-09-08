@@ -77,24 +77,10 @@ else {
 }
 
 //Ice Cream
-`flavor=vanilla`, `vessel=cone`, and`toppings=sprinkles`
+let flavor="vanilla", vessel="cone", toppings="sprinkles"
 
-
-if (flavor === "vanilla" || flavor === "chocolate") {
-  if (vessel === "cone" || vessel === "bowl") {
-    if (toppings === "sprinkles" || toppings === "peanuts") {
-      console.log("I'd like two scoops of " + flavor + " ice cream in a " + vessel + " with " + toppings + ".");
-
-    }
-    else {
-      console.log("Sorry, there are none.");
-    }
-  }
-  else {
-    console.log("Sorry, this type does not exist.")
-  }
-}
-else {
-  console.log("Sorry, this flavor is not available.");
-
+if (flavor === "vanilla"  || flavor === "chocolate" && vessel === "cone" || vessel === "bowl" && toppings === "sprinkles" || toppings === "peanuts") { 
+  console.log(`I'd like two scoops of ${flavor} ice cream in a ${vessel} with ${toppings}.`);
+} else {
+  console.log("Not match");
 }
